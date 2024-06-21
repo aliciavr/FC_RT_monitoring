@@ -20,9 +20,9 @@ class FileCreationHandler(FileSystemEventHandler):
 
     def on_created(self, event):
         if not event.is_directory:
-            #psplit = event.src_path.split(".")
-            #filepath = psplit[0] + psplit[1] + "." + psplit[2]
-            filepath = event.src_path
+            psplit = event.src_path.split(".")
+            filepath = psplit[0] + psplit[1] + "." + psplit[2]
+            #filepath = event.src_path
             if filepath.endswith(".csv"):
                 print(f"New file detected: {filepath}")
                 self.created_files.put(filepath)
@@ -94,7 +94,6 @@ def plot(filepath, fig, gs):
 
 if __name__ == "__main__":
 
-    # Crear la figura y el diseño de la cuadrícula
     fig = plt.figure(figsize=(16, 8))
     gs = GridSpec(2, 4, figure=fig, width_ratios=[3, 1, 1, 1])
 
