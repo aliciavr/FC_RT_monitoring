@@ -1,3 +1,11 @@
+"""
+Created on 2024/06/18
+Author: Alicia Vázquez-Ramos
+E-mail: aliciavr@ugr.es
+Description: Plot the four channels of the oscilloscope monitoring the Field Cage.
+The plot is updated when a new file is created.
+"""
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.animation import FuncAnimation
