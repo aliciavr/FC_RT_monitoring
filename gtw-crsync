@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+  rsync -arzP sbnd@sbnd-gateway02.fnal.gov:'/daq/scratch/FC_mini_osc/*' FC_mini_osc/
+  sleep 1
+done

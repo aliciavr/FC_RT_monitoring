@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+  rsync -arzP sbnd01:'/exp/sbnd/data/users/aliciavr/FCM/FC_mini_osc/*' FC_mini_osc/
+  sleep 1
+done
